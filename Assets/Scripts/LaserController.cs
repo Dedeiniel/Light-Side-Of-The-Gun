@@ -17,9 +17,15 @@ public class LaserController : MonoBehaviour
 
     void Update() 
     {
+        ShootLaser();
+
         if (activateLaser)
         {
-            ShootLaser();
+            lineRenderer.enabled = true;                
+        }
+        else
+        {
+            lineRenderer.enabled = false;
         }
     }
     
@@ -42,4 +48,5 @@ public class LaserController : MonoBehaviour
         lineRenderer.SetPosition(1, endPos);
     }
 
+    
 }
