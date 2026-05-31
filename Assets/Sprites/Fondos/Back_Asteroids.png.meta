@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: e23bf6fae9bae89478b0e756b1f6703c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1513778924365321917
+    second: Back_Asteroids_0
+  - first:
+      213: 871986940255232950
+    second: Back_Asteroids_1
+  - first:
+      213: -6519191453125835871
+    second: Back_Asteroids_2
+  - first:
+      213: -9202859351692332154
+    second: Back_Asteroids_3
+  - first:
+      213: 7850622172838711873
+    second: Back_Asteroids_4
+  - first:
+      213: -3175266326494062277
+    second: Back_Asteroids_5
+  - first:
+      213: -3594866893757153834
+    second: Back_Asteroids_6
+  - first:
+      213: -7125109649843848249
+    second: Back_Asteroids_7
+  - first:
+      213: 8380993508479580198
+    second: Back_Asteroids_8
+  - first:
+      213: -5464892498951903298
+    second: Back_Asteroids_9
+  - first:
+      213: 4277460011136225280
+    second: Back_Asteroids_10
+  - first:
+      213: -8868049463769502098
+    second: Back_Asteroids_11
+  - first:
+      213: 1108552781166369264
+    second: Back_Asteroids_12
+  - first:
+      213: -2412899359394749315
+    second: Back_Asteroids_13
+  - first:
+      213: 6595604370300659903
+    second: Back_Asteroids_14
+  - first:
+      213: -619482344343462663
+    second: Back_Asteroids_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Back_Asteroids_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 113
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3496bb0b61afdfae0800000000000000
+      internalID: -1513778924365321917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 122
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b361be808be91c00800000000000000
+      internalID: 871986940255232950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 117
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a30cadd9ed2785a0800000000000000
+      internalID: -6519191453125835871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_3
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 123
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6833f70bd20e84080800000000000000
+      internalID: -9202859351692332154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 98
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1425bd5954303fc60800000000000000
+      internalID: 7850622172838711873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 101
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39df0e69103fe3d0800000000000000
+      internalID: -3175266326494062277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 98
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddfac64b977c1ec0800000000000000
+      internalID: -3594866893757153834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb795f16868e1d90800000000000000
+      internalID: -7125109649843848249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628b7c901354f4470800000000000000
+      internalID: 8380993508479580198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_9
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 6
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb76648f93dc824b0800000000000000
+      internalID: -5464892498951903298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_10
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 22
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00096b897379c5b30800000000000000
+      internalID: 4277460011136225280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_11
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 17
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6eec656ffb5ee480800000000000000
+      internalID: -8868049463769502098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 8
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9513091ee526f00800000000000000
+      internalID: 1108552781166369264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 9
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74228411d8a38ed0800000000000000
+      internalID: -2412899359394749315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_14
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8e8c2da3b488b50800000000000000
+      internalID: 6595604370300659903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Asteroids_15
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 9
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc18c807182767f0800000000000000
+      internalID: -619482344343462663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Back_Asteroids_0: -1513778924365321917
+      Back_Asteroids_1: 871986940255232950
+      Back_Asteroids_10: 4277460011136225280
+      Back_Asteroids_11: -8868049463769502098
+      Back_Asteroids_12: 1108552781166369264
+      Back_Asteroids_13: -2412899359394749315
+      Back_Asteroids_14: 6595604370300659903
+      Back_Asteroids_15: -619482344343462663
+      Back_Asteroids_2: -6519191453125835871
+      Back_Asteroids_3: -9202859351692332154
+      Back_Asteroids_4: 7850622172838711873
+      Back_Asteroids_5: -3175266326494062277
+      Back_Asteroids_6: -3594866893757153834
+      Back_Asteroids_7: -7125109649843848249
+      Back_Asteroids_8: 8380993508479580198
+      Back_Asteroids_9: -5464892498951903298
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

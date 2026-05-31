@@ -2,36 +2,20 @@ using UnityEngine;
 
 public class ParallaxController : MonoBehaviour
 {
-    [SerializeField] Transform[] backgrounds;
-    [SerializeField] float smoothing = 10f; //suavidad del paralaje
-    [SerializeField] float multiplier = 15f; //que tanto aumenta el paralaje por capa
+    public float Speed;
+    public bool Horizontal = true;
 
-    Transform cam; //camara principal
-    Vector3 prevCamPos; //posicion de la camara en el frame anterior
+    public Renderer bgRenderer;
 
-    void Awake() 
-    {
-        cam = Camera.main.transform;
-    }
- 
-    void Start()
-    {
-        prevCamPos = cam.position;
-    }
-
- 
     void Update()
     {
-        for(var i = 0; i < backgrounds.Length; i++) 
+        if (Horizontal)
         {
-            var parallax = (prevCamPos.y - cam.position.y) * (i * multiplier);
-            var targetY = backgrounds[i].position.y + parallax;
-
-            var targetPosition = new Vector3(backgrounds[i].position.x, targetY, backgrounds[i].position.z);
-
-            backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, targetPosition, smoothing * Time.deltaTime);
+            bgRenderer.material.mainTextureOffset += new Vector2(Speed * Time.deltaTime, 0);
         }
-
-        prevCamPos = cam.position;
+        else
+        {
+            bgRenderer.material.mainTextureOffset += new Vector2(0, Speed * Time.deltaTime);
+        }
     }
 }
