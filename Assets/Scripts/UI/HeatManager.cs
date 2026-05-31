@@ -1,16 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeatManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Slider BarraCalor;
 
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        
+        if (FakeGameManager.instance.state == FakeGameManager.GameStates.Playing) 
+        {
+            BarraCalor.value = ShootLaser.instance.heatTimer / ShootLaser.instance.TiempoDeDisparo;
+        }
     }
 }

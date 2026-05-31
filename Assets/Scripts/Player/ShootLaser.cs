@@ -1,0 +1,94 @@
+using UnityEngine;
+
+public class ShootLaser : MonoBehaviour
+{
+    public static ShootLaser instance;
+    
+    public enum LaserState
+    {
+        Cargar,
+        Disparar,
+        Enfriar
+    }
+    LaserState currentState = LaserState.Cargar;
+
+    public Material material;
+    LaserBeam beam;
+
+    [Space(5)]
+    public float TiempoDeCarga = 2f;
+    float chargeTimer;
+    [Space(5)]
+    public float TiempoDeDisparo = 10f;
+    public float heatTimer;
+    [Space(5)]
+    public float TiempoDeEnfriamiento = 2f;
+
+    void Awake() 
+    {
+        instance = this;
+    }
+
+    void Update()
+    {
+        switch (currentState)
+        {
+            case LaserState.Cargar:
+                if (Input.GetMouseButton(0))
+                {
+                    chargeTimer += Time.deltaTime;
+                    if (chargeTimer >= TiempoDeCarga)
+                    {
+                        currentState = LaserState.Disparar;
+                        chargeTimer = 0f;
+                    }
+                }
+                else if (Input.GetMouseButtonUp(0))
+                {
+                    chargeTimer = 0f;
+                }
+                break;
+            case LaserState.Disparar:
+                if (Input.GetMouseButton(0))
+                {
+                    heatTimer += Time.deltaTime;
+                    if (heatTimer >= TiempoDeDisparo)
+                    {
+                        currentState = LaserState.Enfriar;
+                        heatTimer = TiempoDeDisparo;
+                    }
+                    if (beam != null)
+                    {
+                        Destroy(beam.laserObj);
+                    }
+                    beam = new LaserBeam(gameObject.transform.position, gameObject.transform.up, material);
+                }
+                else 
+                {
+                    if (beam != null)
+                    {
+                        Destroy(beam.laserObj);
+                    }
+                    heatTimer -= Time.deltaTime;
+                    if(heatTimer <= 0f) 
+                    {
+                        currentState = LaserState.Cargar;
+                        heatTimer = 0f;
+                    }
+                }
+                break;
+            case LaserState.Enfriar:
+                if (beam != null)
+                {
+                    Destroy(beam.laserObj);
+                }
+                heatTimer -= (TiempoDeDisparo / TiempoDeEnfriamiento) * Time.deltaTime;
+                if(heatTimer <= 0f) 
+                {
+                    heatTimer = 0f;
+                    currentState = LaserState.Cargar;
+                }
+                break;
+        }
+    }
+}

@@ -1,16 +1,20 @@
 using UnityEngine;
+using TMPro;
+using System;
 
 public class TimerManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI TimerTexto;
+    float tiempoJuego;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (FakeGameManager.instance.state == FakeGameManager.GameStates.Playing) 
+        {
+            tiempoJuego += Time.deltaTime;
+            TimeSpan time = TimeSpan.FromSeconds(tiempoJuego);
+
+            TimerTexto.text = time.ToString(@"mm\:ss\:ff");
+        }
     }
 }

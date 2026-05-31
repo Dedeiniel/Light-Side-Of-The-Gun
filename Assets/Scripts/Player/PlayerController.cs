@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public float moveSpeed = 5f;
 
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     public bool activateRotation = true;
 
     private void Awake() 
     {
-        rb = GetComponent<Rigidbody2D>();
+        instance = this;
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
