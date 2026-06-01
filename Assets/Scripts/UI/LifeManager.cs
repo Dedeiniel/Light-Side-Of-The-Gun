@@ -14,10 +14,19 @@ public class LifeManager : MonoBehaviour
     {
         instance = this;
     }
-
     
     void Update()
     {
-        VidaTexto.text = "HP " + Vidas.ToString();               
+        VidaTexto.text = "HP " + Vidas.ToString();
+        if (Vidas == 0)
+        {
+            FakeLevelManager.instance.ReturnToHub();
+            Vidas = 3;
+        }
     }
+
+    public void LifeDown() 
+    {
+
+    } 
 }

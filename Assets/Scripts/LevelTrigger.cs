@@ -10,6 +10,8 @@ public class LevelTrigger : MonoBehaviour
     [Space(5)]
     public bool BossDefeated;
     public GameObject Flecha;
+    [Space(5)]
+    public FakeLevelManager.LevelState ThisLevel;
 
     private Collider thisCollider;
 
@@ -32,6 +34,7 @@ public class LevelTrigger : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             FakeLevelManager.instance.GoToLevel(Rotation, LevelIndex);
+            FakeLevelManager.instance.currentLevel = ThisLevel;
         }
     } 
 

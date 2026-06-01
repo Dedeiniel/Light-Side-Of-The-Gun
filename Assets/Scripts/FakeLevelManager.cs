@@ -5,6 +5,16 @@ public class FakeLevelManager : MonoBehaviour
 {
     public static FakeLevelManager instance;
 
+    public enum LevelState 
+    {
+        UP,
+        DOWN,
+        RIGHT,
+        LEFT,
+        HUB
+    }
+    public LevelState currentLevel = LevelState.HUB;
+
     public CanvasGroup TransicionDeNivel;
     public float TiempoTransicion = 1f;
     [Space(5)]
@@ -22,12 +32,30 @@ public class FakeLevelManager : MonoBehaviour
         instance = this;
     }
 
+    void Update() 
+    {
+        switch (currentLevel) 
+        {
+            case LevelState.UP:
+                break;
+            case LevelState.DOWN:
+                break;
+            case LevelState.RIGHT:
+                break;
+            case LevelState.LEFT:
+                break;
+            case LevelState.HUB:
+                break;
+        }
+    }
+
     public void ReturnToHub() 
     {
         FadeToBlack(TiempoTransicion);
         Player.position = new Vector3(0f, 0f, 0f);
         PlayerController.instance.activateRotation = true;
         MainCamera.position = new Vector3(0f ,0f ,-10f);
+        currentLevel = LevelState.HUB;
         FadeFromBlack(TiempoTransicion);
     }
 

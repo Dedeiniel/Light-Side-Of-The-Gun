@@ -32,6 +32,9 @@ public class ShootLaser : MonoBehaviour
     public float heatTimer;
     [Space(5)]
     public float TiempoDeEnfriamiento = 2f;
+    [Space(5)]
+    public float DañoLaser;
+    public float damageCounter;
 
     void Awake() 
     {

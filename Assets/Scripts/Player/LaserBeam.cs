@@ -117,8 +117,36 @@ public class LaserBeam
             Vector3 refractedVector2 = Refract(n2, n1, -hit2.normal, refractedVector);
             CastRay(hit2.point, refractedVector2, laser);
         }
-        else 
+        else if (hitInfo.collider.gameObject.tag == "Enemy") 
         {
+            if (hitInfo.collider.gameObject.GetComponent<EnemyBasic>().ThisSpriteColor.color == this.laser.startColor) 
+            {
+                if (ShootLaser.instance.damageCounter >= 1f)
+                {
+                    hitInfo.collider.gameObject.GetComponent<EnemyBasic>().EnemyHP -= ShootLaser.instance.DañoLaser;
+                    ShootLaser.instance.damageCounter = 0f;
+                }
+                else
+                {
+                    ShootLaser.instance.damageCounter += Time.deltaTime;
+                }
+            }
+            laserIndices.Add(hitInfo.point);
+            UpdateLaser();
+        }
+        else if (hitInfo.collider.gameObject.tag == "Enemy Medium")
+        {
+            laserIndices.Add(hitInfo.point);
+            UpdateLaser();
+        }
+        else if (hitInfo.collider.gameObject.tag == "Boss")
+        {
+            laserIndices.Add(hitInfo.point);
+            UpdateLaser();
+        }
+        else
+        {
+            ShootLaser.instance.damageCounter = 0f;
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
         }

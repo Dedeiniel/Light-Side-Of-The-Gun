@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Mirror
   - Refractor
+  - Enemy
+  - Boss
+  - Enemy Medium
   layers:
   - Default
   - TransparentFX
