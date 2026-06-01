@@ -1,16 +1,23 @@
 using UnityEngine;
+using TMPro;
+using System;
 
 public class LifeManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static LifeManager instance;
+
+    public TextMeshProUGUI VidaTexto;
+
+    public int Vidas = 3;
+
+    void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        VidaTexto.text = "HP " + Vidas.ToString();               
     }
 }

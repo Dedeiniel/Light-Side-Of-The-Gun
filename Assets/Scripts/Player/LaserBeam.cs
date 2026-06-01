@@ -27,8 +27,21 @@ public class LaserBeam
         this.laser.startWidth = 0.1f;
         this.laser.endWidth = 0.1f;
         this.laser.material = material;
-        this.laser.startColor = Color.white;
-        this.laser.endColor = Color.white;
+        if (ShootLaser.instance.currentColor == ShootLaser.ColorState.Rojo)
+        {
+            this.laser.startColor = Color.red;
+            this.laser.endColor = Color.red;
+        }
+        else if (ShootLaser.instance.currentColor == ShootLaser.ColorState.Verde) 
+        {
+            this.laser.startColor = Color.green;
+            this.laser.endColor = Color.green;
+        }
+        else 
+        {
+            this.laser.startColor = Color.blue;
+            this.laser.endColor = Color.blue;
+        }
 
         CastRay(pos, dir, laser);
     }

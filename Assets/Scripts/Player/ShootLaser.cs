@@ -12,6 +12,15 @@ public class ShootLaser : MonoBehaviour
     }
     LaserState currentState = LaserState.Cargar;
 
+    public enum ColorState 
+    {
+        Rojo,
+        Verde,
+        Azul
+    }
+    public ColorState currentColor = ColorState.Rojo;
+
+
     public Material material;
     LaserBeam beam;
 
@@ -31,6 +40,28 @@ public class ShootLaser : MonoBehaviour
 
     void Update()
     {
+        switch (currentColor) 
+        {
+            case ColorState.Rojo:
+                if (Input.GetMouseButtonDown(1)) 
+                {
+                    currentColor = ColorState.Verde;
+                }
+                break;
+            case ColorState.Verde:
+                if (Input.GetMouseButtonDown(1))
+                {
+                    currentColor = ColorState.Azul;
+                }
+                break;
+            case ColorState.Azul:
+                if (Input.GetMouseButtonDown(1))
+                {
+                    currentColor = ColorState.Rojo;
+                }
+                break;
+        }
+
         switch (currentState)
         {
             case LaserState.Cargar:
