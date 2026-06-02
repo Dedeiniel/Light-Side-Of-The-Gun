@@ -136,11 +136,35 @@ public class LaserBeam
         }
         else if (hitInfo.collider.gameObject.tag == "Enemy Medium")
         {
+            if (hitInfo.collider.gameObject.GetComponent<EnemyMedium>().ThisSpriteColor.color == this.laser.startColor)
+            {
+                if (ShootLaser.instance.damageCounter >= 1f)
+                {
+                    hitInfo.collider.gameObject.GetComponent<EnemyMedium>().EnemyHP -= ShootLaser.instance.DañoLaser;
+                    ShootLaser.instance.damageCounter = 0f;
+                }
+                else
+                {
+                    ShootLaser.instance.damageCounter += Time.deltaTime;
+                }
+            }
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
         }
         else if (hitInfo.collider.gameObject.tag == "Boss")
         {
+            if (hitInfo.collider.gameObject.GetComponent<Boss>().ThisSpriteColor.color == this.laser.startColor)
+            {
+                if (ShootLaser.instance.damageCounter >= 1f)
+                {
+                    hitInfo.collider.gameObject.GetComponent<Boss>().EnemyHP -= ShootLaser.instance.DañoLaser;
+                    ShootLaser.instance.damageCounter = 0f;
+                }
+                else
+                {
+                    ShootLaser.instance.damageCounter += Time.deltaTime;
+                }
+            }
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
         }
