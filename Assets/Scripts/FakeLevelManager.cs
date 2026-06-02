@@ -55,6 +55,7 @@ public class FakeLevelManager : MonoBehaviour
         PlayerController.instance.activateRotation = true;
         MainCamera.position = new Vector3(0f ,0f ,-10f);
         currentLevel = LevelState.HUB;
+        MusicManager.instance.PlayCentralHub();
         FadeFromBlack(TiempoTransicion);
     }
 
@@ -66,6 +67,7 @@ public class FakeLevelManager : MonoBehaviour
         Player.position = PlayerSpawnPoints[levelIndex].position;
         MainCamera.position = Levels[levelIndex].position;
         FadeFromBlack(TiempoTransicion);
+        MusicManager.instance.PlayMainBattle();
     }
 
     public void FadeToBlack(float duration) 

@@ -37,6 +37,7 @@ public class FakeGameManager : MonoBehaviour
         {
             case GameStates.Title:
                 PantallaTitulo.SetActive(true);
+                MusicManager.instance.PlayMainMenu();
                 if (Input.GetMouseButtonDown(0))
                 {
                     state = GameStates.Intro;
@@ -56,6 +57,7 @@ public class FakeGameManager : MonoBehaviour
                 if (Input.GetMouseButtonDown(0)) 
                 {
                     state = GameStates.Playing;
+                    MusicManager.instance.PlayCentralHub();
                     Player.SetActive(true);
                 }
                 break;
@@ -72,6 +74,7 @@ public class FakeGameManager : MonoBehaviour
                 if (JefesDerrotados == 4) 
                 {
                     FakeLevelManager.instance.ReturnToHub();
+                    MusicManager.instance.PlayWin();
                     state = GameStates.Win;
                 }
                 break;

@@ -84,6 +84,7 @@ public class Boss : MonoBehaviour
         CurrentSpiralAngle = EnemyManager.instance.CurrentSpiralAngle;
         StartingX = transform.position.x;
         StartingY = transform.position.y;
+        MusicManager.instance.PlayBoss();
     }
 
     void Update()

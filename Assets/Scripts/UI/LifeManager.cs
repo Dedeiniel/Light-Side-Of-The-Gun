@@ -20,6 +20,7 @@ public class LifeManager : MonoBehaviour
         VidaTexto.text = "HP " + Vidas.ToString();
         if (Vidas == 0)
         {
+            MusicManager.instance.PlayGameOver();
             FakeLevelManager.instance.ReturnToHub();
             Vidas = 3;
         }
