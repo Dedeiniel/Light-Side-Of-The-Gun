@@ -32,4 +32,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other) 
+    {
+        if (other.CompareTag("Enemy") || other.CompareTag("Enemy Medium") || other.CompareTag("Boss") || other.CompareTag("Bullet")) 
+        {
+
+            if (PowerUps.instance.SiLaser) 
+            {
+                PowerUps.instance.SiLaser = false;
+            }
+            else 
+            {
+                LifeManager.instance.Vidas--;
+            }
+        }
+    }
 }

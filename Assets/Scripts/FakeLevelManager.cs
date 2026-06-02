@@ -18,7 +18,6 @@ public class FakeLevelManager : MonoBehaviour
     public CanvasGroup TransicionDeNivel;
     public float TiempoTransicion = 1f;
     [Space(5)]
-    public int JefesDerrotados;
     [Tooltip("0 = UP, 1 = DOWN, 2 = RIGHT, 3 = LEFT")]
     public Transform[] Levels;// 0 = UP, 1 = DOWN, 2 = RIGHT, 3 = LEFT
     [Tooltip("0 = UP, 1 = DOWN, 2 = RIGHT, 3 = LEFT")]

@@ -119,9 +119,9 @@ public class LaserBeam
         }
         else if (hitInfo.collider.gameObject.tag == "Enemy") 
         {
-            if (hitInfo.collider.gameObject.GetComponent<EnemyBasic>().ThisSpriteColor.color == this.laser.startColor) 
+            if (hitInfo.collider.gameObject.GetComponent<EnemyBasic>().ThisSpriteColor.color != null && hitInfo.collider.gameObject.GetComponent<EnemyBasic>().ThisSpriteColor.color == this.laser.startColor) 
             {
-                if (ShootLaser.instance.damageCounter >= 1f)
+                if (ShootLaser.instance.damageCounter >= 0.5f)
                 {
                     hitInfo.collider.gameObject.GetComponent<EnemyBasic>().EnemyHP -= ShootLaser.instance.DañoLaser;
                     ShootLaser.instance.damageCounter = 0f;
@@ -136,15 +136,17 @@ public class LaserBeam
         }
         else if (hitInfo.collider.gameObject.tag == "Enemy Medium")
         {
-            if (hitInfo.collider.gameObject.GetComponent<EnemyMedium>().ThisSpriteColor.color == this.laser.startColor)
+            if (hitInfo.collider.gameObject.GetComponent<EnemyMedium>().ThisSpriteColor.color != null && hitInfo.collider.gameObject.GetComponent<EnemyMedium>().ThisSpriteColor.color == this.laser.startColor)
             {
-                if (ShootLaser.instance.damageCounter >= 1f)
+                if (ShootLaser.instance.damageCounter >= 0.5f)
                 {
                     hitInfo.collider.gameObject.GetComponent<EnemyMedium>().EnemyHP -= ShootLaser.instance.DañoLaser;
                     ShootLaser.instance.damageCounter = 0f;
+
                 }
                 else
                 {
+                    
                     ShootLaser.instance.damageCounter += Time.deltaTime;
                 }
             }
@@ -153,15 +155,16 @@ public class LaserBeam
         }
         else if (hitInfo.collider.gameObject.tag == "Boss")
         {
-            if (hitInfo.collider.gameObject.GetComponent<Boss>().ThisSpriteColor.color == this.laser.startColor)
+            if (hitInfo.collider.gameObject.GetComponent<Boss>().ThisSpriteColor.color != null && hitInfo.collider.gameObject.GetComponent<Boss>().ThisSpriteColor.color == this.laser.startColor)
             {
-                if (ShootLaser.instance.damageCounter >= 1f)
+                if (ShootLaser.instance.damageCounter >= 0.5f)
                 {
                     hitInfo.collider.gameObject.GetComponent<Boss>().EnemyHP -= ShootLaser.instance.DañoLaser;
                     ShootLaser.instance.damageCounter = 0f;
                 }
                 else
                 {
+
                     ShootLaser.instance.damageCounter += Time.deltaTime;
                 }
             }

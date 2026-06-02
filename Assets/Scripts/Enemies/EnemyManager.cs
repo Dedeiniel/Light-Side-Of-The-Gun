@@ -6,7 +6,7 @@ public class EnemyManager : MonoBehaviour
 
     public GameObject Boss;
     public float BossSpawnTime = 90f;
-    float levelTimeCounter;
+    public float levelTimeCounter;
     [Space(5)]
     public float EnemySpawnRate = 3f;
     float enemySpawnerCounter;
@@ -29,6 +29,8 @@ public class EnemyManager : MonoBehaviour
     [Space(5)]
     public Transform[] EnemySpawnPointsLEFT;
     public Transform BossSpawnPointLEFT;
+    [Space(5)]
+    public float CurrentSpiralAngle;
 
     void Awake() 
     {
@@ -195,8 +197,18 @@ public class EnemyManager : MonoBehaviour
         }
         else 
         {
+            Boss.SetActive(false);
             enemySpawnerCounter = 0f;
             levelTimeCounter = 0;
+
+            foreach (GameObject enemy in BasicEnemies) 
+            {
+                enemy.SetActive(false);
+            }
+            foreach (GameObject enemy in MediumEnemies) 
+            {
+                enemy.SetActive(false);
+            }
         }
     }
 }

@@ -24,7 +24,9 @@ public class EnemyBasic : MonoBehaviour
     public float MaxAmplitude = 1.5f;
     public float Frequency = 4f;
     float amplitude;
-    public bool SpawnedByMedium; 
+    public bool SpawnedByMedium;
+
+    public GameObject PWUP;
 
     void OnEnable() 
     {
@@ -102,6 +104,11 @@ public class EnemyBasic : MonoBehaviour
         if (EnemyHP <= 0f) 
         {
             ScoreManager.instance.Puntaje += PuntajeEnemigo;
+            int dice = UnityEngine.Random.Range(0,6);
+            if (dice == 0)
+            {
+                Instantiate(PWUP, transform.position, Quaternion.identity);
+            }
         }
         EnemyManager.instance.CurrentEnemiesInScene -= EnemyWeight;
     }

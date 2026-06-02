@@ -24,9 +24,5 @@ public class LifeManager : MonoBehaviour
             Vidas = 3;
         }
     }
-
-    public void LifeDown() 
-    {
-
-    } 
+ 
 }

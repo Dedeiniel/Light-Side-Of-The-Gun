@@ -23,6 +23,8 @@ public class ShootLaser : MonoBehaviour
 
     public Material material;
     LaserBeam beam;
+    LaserBeam beam1;
+    LaserBeam beam2;
 
     [Space(5)]
     public float TiempoDeCarga = 2f;
@@ -95,13 +97,30 @@ public class ShootLaser : MonoBehaviour
                     {
                         Destroy(beam.laserObj);
                     }
+                    if (beam1 !=null && beam2 != null) 
+                    {
+                        Destroy(beam1.laserObj);
+                        Destroy(beam2.laserObj);
+                    }
                     beam = new LaserBeam(gameObject.transform.position, gameObject.transform.up, material);
+                    if (PowerUps.instance.SiLaser) 
+                    {
+                        Vector2 newDirection1 = (gameObject.transform.up + gameObject.transform.right).normalized;
+                        Vector2 newDirection2 = (gameObject.transform.up + -gameObject.transform.right).normalized;
+                        beam1 = new LaserBeam(gameObject.transform.position,newDirection1, material);
+                        beam2 = new LaserBeam(gameObject.transform.position,newDirection2, material);
+                    }
                 }
                 else 
                 {
                     if (beam != null)
                     {
                         Destroy(beam.laserObj);
+                    }
+                    if (beam1 != null && beam2 != null)
+                    {
+                        Destroy(beam1.laserObj);
+                        Destroy(beam2.laserObj);
                     }
                     heatTimer -= Time.deltaTime;
                     if(heatTimer <= 0f) 
@@ -115,6 +134,11 @@ public class ShootLaser : MonoBehaviour
                 if (beam != null)
                 {
                     Destroy(beam.laserObj);
+                }
+                if (beam1 != null && beam2 != null)
+                {
+                    Destroy(beam1.laserObj);
+                    Destroy(beam2.laserObj);
                 }
                 heatTimer -= (TiempoDeDisparo / TiempoDeEnfriamiento) * Time.deltaTime;
                 if(heatTimer <= 0f) 

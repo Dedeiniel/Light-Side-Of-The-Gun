@@ -93,6 +93,7 @@ public class EnemyMedium : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
+
     }
 
     void OnDisable()

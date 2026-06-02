@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FakeGameManager : MonoBehaviour
 {
@@ -19,9 +20,11 @@ public class FakeGameManager : MonoBehaviour
     public GameObject EsquemaInterfaz;
     public GameObject Player;
     public GameObject PantallaVictoria;
-
+    [Space(5)]
     public float ExitTime;
     float exitCounter;
+    [Space(5)]
+    public int JefesDerrotados;
 
     void Awake() 
     {
@@ -66,6 +69,11 @@ public class FakeGameManager : MonoBehaviour
                         Application.Quit();
                     }
                 }
+                if (JefesDerrotados == 4) 
+                {
+                    FakeLevelManager.instance.ReturnToHub();
+                    state = GameStates.Win;
+                }
                 break;
             case GameStates.Win:
                 Player.SetActive(false);
@@ -84,7 +92,7 @@ public class FakeGameManager : MonoBehaviour
 
     public void ResetGame() 
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

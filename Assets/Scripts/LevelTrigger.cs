@@ -31,10 +31,26 @@ public class LevelTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
             FakeLevelManager.instance.GoToLevel(Rotation, LevelIndex);
             FakeLevelManager.instance.currentLevel = ThisLevel;
+            if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.UP)
+            {
+                EnemyManager.instance.CurrentSpiralAngle = 180f;
+            }
+            else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.DOWN) 
+            {
+                EnemyManager.instance.CurrentSpiralAngle = 0f;
+            }
+            else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.RIGHT) 
+            {
+                EnemyManager.instance.CurrentSpiralAngle = 90f;
+            }
+            else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.LEFT) 
+            {
+                EnemyManager.instance.CurrentSpiralAngle = -90f;
+            }
         }
     } 
 
