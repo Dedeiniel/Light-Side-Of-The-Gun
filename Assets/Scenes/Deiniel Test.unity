@@ -1716,6 +1716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootLaser
   currentColor: 0
   material: {fileID: 2100000, guid: e70c6cb97194ae349852c5ca71e4726d, type: 2}
+  LaserLoop: {fileID: 194933202}
   TiempoDeCarga: 0.25
   TiempoDeDisparo: 5
   heatTimer: 0
@@ -2421,6 +2422,135 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &194933202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194933203}
+  - component: {fileID: 194933204}
+  m_Layer: 0
+  m_Name: LaserLoop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &194933203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194933202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1741567597}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &194933204
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194933202}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 12ea7e280a1d73345b9a5c13dae3216d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &195154868
 GameObject:
   m_ObjectHideFlags: 0
@@ -11563,7 +11693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1299834654}
-  - component: {fileID: 1299834655}
+  - component: {fileID: 1299834657}
   - component: {fileID: 1299834656}
   m_Layer: 0
   m_Name: SoundManager
@@ -11587,29 +11717,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 522907530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1299834655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299834653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22d71442a4942f242b75b6858714f20f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  Sonidos:
-  - {fileID: 8300000, guid: f03c590431eee2f4395dacbeebb34b04, type: 3}
-  - {fileID: 8300000, guid: 12ea7e280a1d73345b9a5c13dae3216d, type: 3}
-  - {fileID: 8300000, guid: fdeea8165ad42f7419c3bbaadcba8d02, type: 3}
-  - {fileID: 8300000, guid: a97d7e02bac40e344a9c15c2d39b63a8, type: 3}
-  - {fileID: 8300000, guid: bd0761c8c87cc0e439e216607971eef1, type: 3}
-  - {fileID: 8300000, guid: 3b3d4126316ab7141b5384f1083b9c14, type: 3}
-  - {fileID: 8300000, guid: 4d4c8a2d74930cd438361b16505ab552, type: 3}
-  - {fileID: 8300000, guid: 318d8e5c3822cf944b1b7072cf760eb7, type: 3}
-  - {fileID: 8300000, guid: 7cbdbb51d9f03e2478f4db5061c14f8c, type: 3}
-  - {fileID: 8300000, guid: 85163b0a6fec902459e3ca56eafbd93e, type: 3}
 --- !u!82 &1299834656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11707,6 +11814,49 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1299834657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299834653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d71442a4942f242b75b6858714f20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  soundList:
+  - name: BeamIntro
+    sounds:
+    - {fileID: 8300000, guid: f03c590431eee2f4395dacbeebb34b04, type: 3}
+  - name: BeamLoop
+    sounds:
+    - {fileID: 8300000, guid: 12ea7e280a1d73345b9a5c13dae3216d, type: 3}
+  - name: BeamOutro
+    sounds:
+    - {fileID: 8300000, guid: fdeea8165ad42f7419c3bbaadcba8d02, type: 3}
+  - name: BeamOverheat
+    sounds:
+    - {fileID: 8300000, guid: a97d7e02bac40e344a9c15c2d39b63a8, type: 3}
+  - name: BomExplosion
+    sounds:
+    - {fileID: 8300000, guid: bd0761c8c87cc0e439e216607971eef1, type: 3}
+  - name: BombPickup
+    sounds:
+    - {fileID: 8300000, guid: 3b3d4126316ab7141b5384f1083b9c14, type: 3}
+  - name: ColorChange
+    sounds:
+    - {fileID: 8300000, guid: 4d4c8a2d74930cd438361b16505ab552, type: 3}
+  - name: EnemyExplode
+    sounds:
+    - {fileID: 8300000, guid: 318d8e5c3822cf944b1b7072cf760eb7, type: 3}
+  - name: IcePickup
+    sounds:
+    - {fileID: 8300000, guid: 7cbdbb51d9f03e2478f4db5061c14f8c, type: 3}
+  - name: PrismPickup
+    sounds:
+    - {fileID: 8300000, guid: 85163b0a6fec902459e3ca56eafbd93e, type: 3}
 --- !u!1 &1312266707
 GameObject:
   m_ObjectHideFlags: 0
@@ -14484,6 +14634,7 @@ Transform:
   m_Children:
   - {fileID: 154745179}
   - {fileID: 1191531918}
+  - {fileID: 194933203}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1741567598

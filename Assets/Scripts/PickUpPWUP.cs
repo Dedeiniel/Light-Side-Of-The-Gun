@@ -38,6 +38,7 @@ public class PickUpPWUP : MonoBehaviour
         {
             if (thisPower == Power.Bomba) 
             {
+                SoundManager.PlaySound(SoundType.BombPickup);
                 if (PowerUps.instance.SiBomba) 
                 {
                     ScoreManager.instance.Puntaje += 300;
@@ -49,6 +50,7 @@ public class PickUpPWUP : MonoBehaviour
             }
             else if (thisPower == Power.Laser3) 
             {
+                SoundManager.PlaySound(SoundType.PrismPickup);                
                 if (PowerUps.instance.SiLaser)
                 {
                     ScoreManager.instance.Puntaje += 300;
@@ -60,6 +62,7 @@ public class PickUpPWUP : MonoBehaviour
             }
             else 
             {
+                SoundManager.PlaySound(SoundType.IcePickup);                
                 ShootLaser.instance.heatTimer -= 2f;
             }
 
