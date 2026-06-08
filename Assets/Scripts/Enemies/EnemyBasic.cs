@@ -35,6 +35,9 @@ public class EnemyBasic : MonoBehaviour
     private float damageCounter;
     [Space(5)]
     public GameObject ExplosionPrefab;
+    float attackCounter;
+    [Space(5)]
+    public GameObject bulletPrefab;
 
     void OnEnable() 
     {
@@ -60,6 +63,9 @@ public class EnemyBasic : MonoBehaviour
         {
             EnemyManager.instance.CurrentEnemiesInScene += EnemyWeight;
         }
+        BeingHit = false;
+        damageCounter = 0;
+        attackCounter = 0;
     }
 
     void Update()
@@ -102,7 +108,17 @@ public class EnemyBasic : MonoBehaviour
             transform.position = new Vector3(TrackX, OscilationMove, transform.position.z);
         }
 
-        if(EnemyHP <= 0f) 
+        Vector3 playerDirection = GameObject.FindWithTag("Player").transform.position - transform.position;
+        float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        if (attackCounter >= 1.5f)
+        {
+            Instantiate(bulletPrefab, transform.position, targetRotation);
+            attackCounter = 0;
+        }
+        else { attackCounter += Time.deltaTime; }
+
+        if (EnemyHP <= 0f) 
         {
             this.gameObject.SetActive(false);
         }
@@ -142,8 +158,6 @@ public class EnemyBasic : MonoBehaviour
             }
         }
         EnemyManager.instance.CurrentEnemiesInScene -= EnemyWeight;
-        BeingHit = false;
-        damageCounter = 0;
     }
 
 }

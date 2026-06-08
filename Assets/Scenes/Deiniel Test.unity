@@ -1178,7 +1178,7 @@ MonoBehaviour:
   EsquemaInterfaz: {fileID: 1055964182}
   Player: {fileID: 1741567595}
   PantallaVictoria: {fileID: 1072008350}
-  ExitTime: 3
+  ExitTime: 2
   JefesDerrotados: 0
 --- !u!114 &123758663
 MonoBehaviour:
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1846695811}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -1433,6 +1433,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &141300121
 Transform:
   m_ObjectHideFlags: 0
@@ -1474,7 +1475,7 @@ Transform:
   m_GameObject: {fileID: 141871347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.67, y: -5.24, z: 0}
+  m_LocalPosition: {x: -4.42, y: -5.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2126,7 +2127,7 @@ Transform:
   m_GameObject: {fileID: 177873064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.89, y: 2.29, z: 0}
+  m_LocalPosition: {x: 8.89, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4598,7 +4599,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 467040842}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -4608,6 +4609,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &369513123
 Transform:
   m_ObjectHideFlags: 0
@@ -4695,7 +4697,7 @@ Transform:
   m_GameObject: {fileID: 378644169}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.63, y: 5.26, z: 0}
+  m_LocalPosition: {x: 0.04, y: 5.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5070,7 +5072,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1731287950}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -5080,6 +5082,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &440180996
 Transform:
   m_ObjectHideFlags: 0
@@ -7747,7 +7750,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 103195814}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -7757,6 +7760,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &759759018
 Transform:
   m_ObjectHideFlags: 0
@@ -8750,7 +8754,7 @@ Transform:
   m_GameObject: {fileID: 940365752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.12, y: 5.26, z: 0}
+  m_LocalPosition: {x: 3.16, y: 5.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9839,7 +9843,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 273353153}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -9849,6 +9853,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1061631561
 Transform:
   m_ObjectHideFlags: 0
@@ -10427,7 +10432,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 518154225}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -10437,6 +10442,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1117455404
 Transform:
   m_ObjectHideFlags: 0
@@ -10876,7 +10882,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1084294474}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -10886,6 +10892,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1179844310
 Transform:
   m_ObjectHideFlags: 0
@@ -11374,7 +11381,7 @@ Transform:
   m_GameObject: {fileID: 1219546184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.89, y: -2.47, z: 0}
+  m_LocalPosition: {x: 8.89, y: -1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11414,7 +11421,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1691067008}
   EnemyWeight: 3
-  MaxEnemyHP: 1
+  MaxEnemyHP: 2
   EnemyHP: 0
   PuntajeEnemigo: 100
   EnemySpeed: 1
@@ -11424,6 +11431,7 @@ MonoBehaviour:
   subEnemy2: {fileID: 1890182776}
   BeingHit: 0
   ExplosionPrefab: {fileID: 5778228976447333746, guid: 35892b4cfb66f0f4dbf7eee7b9f654e5, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1243458793
 Transform:
   m_ObjectHideFlags: 0
@@ -11538,7 +11546,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1216883252}
   EnemyWeight: 3
-  MaxEnemyHP: 1
+  MaxEnemyHP: 2
   EnemyHP: 0
   PuntajeEnemigo: 100
   EnemySpeed: 1
@@ -11548,6 +11556,7 @@ MonoBehaviour:
   subEnemy2: {fileID: 1179844305}
   BeingHit: 0
   ExplosionPrefab: {fileID: 5778228976447333746, guid: 35892b4cfb66f0f4dbf7eee7b9f654e5, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!135 &1254845748
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12693,7 +12702,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1977777989}
   EnemyWeight: 3
-  MaxEnemyHP: 1
+  MaxEnemyHP: 2
   EnemyHP: 0
   PuntajeEnemigo: 100
   EnemySpeed: 1
@@ -12703,6 +12712,7 @@ MonoBehaviour:
   subEnemy2: {fileID: 759759013}
   BeingHit: 0
   ExplosionPrefab: {fileID: 5778228976447333746, guid: 35892b4cfb66f0f4dbf7eee7b9f654e5, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1320952825
 Transform:
   m_ObjectHideFlags: 0
@@ -13243,7 +13253,7 @@ Transform:
   m_GameObject: {fileID: 1391849645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.68, y: 5.26, z: 0}
+  m_LocalPosition: {x: -3.77, y: 5.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13274,7 +13284,7 @@ Transform:
   m_GameObject: {fileID: 1395666269}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.37, y: -5.24, z: 0}
+  m_LocalPosition: {x: 3.6, y: -5.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13679,7 +13689,7 @@ Transform:
   m_GameObject: {fileID: 1489196411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.94, y: 2.03, z: 0}
+  m_LocalPosition: {x: -8.94, y: 1.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14070,7 +14080,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1154686667}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -14080,6 +14090,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1601129477
 Transform:
   m_ObjectHideFlags: 0
@@ -14309,7 +14320,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 203871490}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -14319,6 +14330,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1638270864
 Transform:
   m_ObjectHideFlags: 0
@@ -15849,7 +15861,7 @@ Transform:
   m_GameObject: {fileID: 1806998234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.94, y: -2.18, z: 0}
+  m_LocalPosition: {x: -8.94, y: -1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16407,7 +16419,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1419757650}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -16417,6 +16429,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &1890182781
 Transform:
   m_ObjectHideFlags: 0
@@ -26402,7 +26415,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1099122993}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -26412,6 +26425,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!135 &1977426913
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26784,7 +26798,7 @@ MonoBehaviour:
   - {fileID: 1610281658}
   - {fileID: 542427599}
   ThisSpriteColor: {fileID: 1056351915}
-  MaxEnemyHP: 100
+  MaxEnemyHP: 60
   EnemyHP: 0
   PuntajeBoss: 1000
   BossSpeed: 3
@@ -27534,7 +27548,7 @@ MonoBehaviour:
   Boss: {fileID: 1986547801}
   BossSpawnTime: 98
   levelTimeCounter: 0
-  EnemySpawnRate: 2
+  EnemySpawnRate: 1.5
   MaxEnemiesInScene: 6
   CurrentEnemiesInScene: 0
   MediumEnemies:
@@ -27757,7 +27771,7 @@ MonoBehaviour:
   ThisEnemyColor: 0
   ThisSpriteColor: {fileID: 1542329693}
   EnemyWeight: 1
-  MaxEnemyHP: 0.5
+  MaxEnemyHP: 1
   EnemyHP: 0
   PuntajeEnemigo: 50
   EnemySpeed: 2
@@ -27767,6 +27781,7 @@ MonoBehaviour:
   PWUP: {fileID: 6638951919407445083, guid: 65086936a13a7f641843be147ecb832d, type: 3}
   BeingHit: 0
   ExplosionPrefab: {fileID: 4557942540880817971, guid: 8f8871b53a3a3ee4da87369a64f98ec4, type: 3}
+  bulletPrefab: {fileID: 6968602129143699370, guid: 99e2d558e2c79d9478e3d0cdb2f67ee8, type: 3}
 --- !u!4 &2092168382
 Transform:
   m_ObjectHideFlags: 0

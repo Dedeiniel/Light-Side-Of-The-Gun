@@ -29,12 +29,16 @@ public class EnemyMedium : MonoBehaviour
     [Space(5)]
     public GameObject subEnemy1;
     public GameObject subEnemy2;
+    private bool vertical;
 
     public bool BeingHit;
 
     private float damageCounter;
     [Space(5)]
     public GameObject ExplosionPrefab;
+    float attackCounter;
+    [Space(5)]
+    public GameObject bulletPrefab;
 
     void OnEnable()
     {
@@ -57,12 +61,16 @@ public class EnemyMedium : MonoBehaviour
         EnemyHP = MaxEnemyHP;
         amplitude = UnityEngine.Random.Range(-MaxAmplitude, MaxAmplitude);
         EnemyManager.instance.CurrentEnemiesInScene += EnemyWeight;
+        damageCounter = 0;
+        BeingHit = false;
+        attackCounter = 0;
     }
 
     void Update()
     {
         if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.UP)
         {
+            vertical = true;
             transform.rotation = Quaternion.Euler(0, 0, 180);
             float TrackY = transform.position.y;
             TrackY -= EnemySpeed * Time.deltaTime;
@@ -72,6 +80,7 @@ public class EnemyMedium : MonoBehaviour
         }
         else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.DOWN)
         {
+            vertical = true;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             float TrackY = transform.position.y;
             TrackY += EnemySpeed * Time.deltaTime;
@@ -81,6 +90,7 @@ public class EnemyMedium : MonoBehaviour
         }
         else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.RIGHT)
         {
+            vertical = false;
             transform.rotation = Quaternion.Euler(0, 0, 90);
             float TrackX = transform.position.x;
             TrackX -= EnemySpeed * Time.deltaTime;
@@ -90,6 +100,7 @@ public class EnemyMedium : MonoBehaviour
         }
         else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.LEFT)
         {
+            vertical = false;
             transform.rotation = Quaternion.Euler(0, 0, -90);
             float TrackX = transform.position.x;
             TrackX += EnemySpeed * Time.deltaTime;
@@ -97,6 +108,16 @@ public class EnemyMedium : MonoBehaviour
 
             transform.position = new Vector3(TrackX, OscilationMove, transform.position.z);
         }
+
+        Vector3 playerDirection = GameObject.FindWithTag("Player").transform.position - transform.position;
+        float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        if (attackCounter >= 1f) 
+        {
+            Instantiate(bulletPrefab, transform.position, targetRotation);
+            attackCounter = 0;
+        }
+        else { attackCounter += Time.deltaTime; }
 
         if (EnemyHP <= 0f)
         {
@@ -132,16 +153,27 @@ public class EnemyMedium : MonoBehaviour
             Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
             EnemyManager.instance.CurrentEnemiesInScene--;
             ScoreManager.instance.Puntaje += PuntajeEnemigo;
-            subEnemy1.transform.position = transform.position;
-            subEnemy2.transform.position = transform.position;
-            subEnemy1.SetActive(true);
-            subEnemy2.SetActive(true);
+            if (vertical) 
+            {
+                float Xdistance = transform.position.x;
+                subEnemy1.transform.position = new Vector3(Xdistance + 1, transform.position.y, transform.position.z);
+                subEnemy2.transform.position = new Vector3(Xdistance - 1, transform.position.y, transform.position.z);
+                subEnemy1.SetActive(true);
+                subEnemy2.SetActive(true);
+            }
+            else 
+            {
+                float Ydistance = transform.position.y;
+                subEnemy1.transform.position = new Vector3(transform.position.x, Ydistance + 1, transform.position.z);
+                subEnemy2.transform.position = new Vector3(transform.position.x, Ydistance - 1, transform.position.z);
+                subEnemy1.SetActive(true);
+                subEnemy2.SetActive(true);
+            }
+
         }
         else 
         {
             EnemyManager.instance.CurrentEnemiesInScene-= EnemyWeight;
         }
-        damageCounter = 0;
-        BeingHit = false;
     }
 }
