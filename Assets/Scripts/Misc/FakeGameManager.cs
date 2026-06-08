@@ -11,6 +11,7 @@ public class FakeGameManager : MonoBehaviour
         Intro,
         Intro2,
         Playing,
+        Stop,
         Win,
     }
     public GameStates state;
@@ -73,7 +74,6 @@ public class FakeGameManager : MonoBehaviour
                 }
                 if (JefesDerrotados == 4) 
                 {
-                    FakeLevelManager.instance.ReturnToHub();
                     MusicManager.instance.PlayWin();
                     state = GameStates.Win;
                 }
@@ -89,6 +89,9 @@ public class FakeGameManager : MonoBehaviour
                 {
                     ResetGame();
                 }
+                break;
+            case GameStates.Stop:
+                MusicManager.instance.MuteAll();
                 break;
         }
     }

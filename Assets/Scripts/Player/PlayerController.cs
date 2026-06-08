@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public bool activateRotation = true;
 
+    [Space(5)]
+    public GameObject ExplosionPrefab;
+
     private void Awake() 
     {
         instance = this;
@@ -18,17 +21,20 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        Vector2 movement = new Vector2(moveX, moveY);
-        movement.Normalize();
-
-        rb.linearVelocity = movement * moveSpeed;
-        if(movement != Vector2.zero && activateRotation) 
+        if (FakeGameManager.instance.state == FakeGameManager.GameStates.Playing) 
         {
-            float angle = Mathf.Atan2(-movement.x, movement.y) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+            float moveX = Input.GetAxisRaw("Horizontal");
+            float moveY = Input.GetAxisRaw("Vertical");
+
+            Vector2 movement = new Vector2(moveX, moveY);
+            movement.Normalize();
+
+            rb.linearVelocity = movement * moveSpeed;
+            if (movement != Vector2.zero && activateRotation)
+            {
+                float angle = Mathf.Atan2(-movement.x, movement.y) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
         }
     }
 
@@ -44,6 +50,7 @@ public class PlayerController : MonoBehaviour
             else 
             {
                 LifeManager.instance.Vidas--;
+                Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
             }
         }
     }

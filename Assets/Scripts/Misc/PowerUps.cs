@@ -8,6 +8,7 @@ public class PowerUps : MonoBehaviour
     public bool SiBomba;
     public GameObject Laser3IMG;
     public bool SiLaser;
+    public GameObject BombParticles;
 
     void Awake() 
     {
@@ -21,6 +22,8 @@ public class PowerUps : MonoBehaviour
             BombaIMG.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space)) 
             {
+                BombParticles.SetActive(true);
+                SoundManager.PlaySound(SoundType.BomExplosion);
                 Bombastic();
             }
         }

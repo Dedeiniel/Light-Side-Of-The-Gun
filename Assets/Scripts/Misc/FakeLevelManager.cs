@@ -26,6 +26,8 @@ public class FakeLevelManager : MonoBehaviour
     public Transform Player;
     public Transform MainCamera;
 
+    private Vector3 originalCamPosition;
+
     void Awake() 
     {
         instance = this;
@@ -47,6 +49,7 @@ public class FakeLevelManager : MonoBehaviour
                 break;
         }
     }
+
 
     public void ReturnToHub() 
     {

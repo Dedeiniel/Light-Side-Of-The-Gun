@@ -12,6 +12,8 @@ public class EnemyMedium : MonoBehaviour
     public EnemyColor ThisEnemyColor;
 
     public SpriteRenderer ThisSpriteColor;
+    private Color damageColor;
+    private Color originalColor;
     [Space(5)]
     public int EnemyWeight = 3;
     [Space(5)]
@@ -27,6 +29,12 @@ public class EnemyMedium : MonoBehaviour
     [Space(5)]
     public GameObject subEnemy1;
     public GameObject subEnemy2;
+
+    public bool BeingHit;
+
+    private float damageCounter;
+    [Space(5)]
+    public GameObject ExplosionPrefab;
 
     void OnEnable()
     {
@@ -44,6 +52,8 @@ public class EnemyMedium : MonoBehaviour
             ThisSpriteColor.color = Color.blue;
         }
 
+        originalColor = ThisSpriteColor.color;
+        damageColor = new Color(ThisSpriteColor.color.r * 2f, ThisSpriteColor.color.g * 2f, ThisSpriteColor.color.b * 2f, ThisSpriteColor.color.a);
         EnemyHP = MaxEnemyHP;
         amplitude = UnityEngine.Random.Range(-MaxAmplitude, MaxAmplitude);
         EnemyManager.instance.CurrentEnemiesInScene += EnemyWeight;
@@ -93,6 +103,25 @@ public class EnemyMedium : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
+        if (BeingHit)
+        {
+            ThisSpriteColor.color = damageColor;
+            if (damageCounter >= 0.5f)
+            {
+                EnemyHP -= ShootLaser.instance.DañoLaser;
+                damageCounter = 0;
+                BeingHit = false;
+            }
+            else 
+            {
+                damageCounter += Time.deltaTime;
+            }
+        }
+        else
+        {
+            ThisSpriteColor.color = originalColor;
+            damageCounter = 0;
+        }
 
     }
 
@@ -100,6 +129,7 @@ public class EnemyMedium : MonoBehaviour
     {
         if (EnemyHP <= 0f)
         {
+            Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
             EnemyManager.instance.CurrentEnemiesInScene--;
             ScoreManager.instance.Puntaje += PuntajeEnemigo;
             subEnemy1.transform.position = transform.position;
@@ -111,5 +141,7 @@ public class EnemyMedium : MonoBehaviour
         {
             EnemyManager.instance.CurrentEnemiesInScene-= EnemyWeight;
         }
+        damageCounter = 0;
+        BeingHit = false;
     }
 }

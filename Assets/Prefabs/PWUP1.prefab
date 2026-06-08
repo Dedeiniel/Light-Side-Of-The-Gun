@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8477465501854369302}
   - component: {fileID: 1848136453821794147}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 2069582566712749032}
   - component: {fileID: 6084888335309222922}
   - component: {fileID: 8463425065000196972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PWUP1
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8374400446065089964}
   - component: {fileID: 5901452234000866213}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Laser3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3615780490401293153}
   - component: {fileID: 2661467917539217182}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hielo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

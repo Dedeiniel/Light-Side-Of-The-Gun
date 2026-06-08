@@ -20,6 +20,7 @@ public class LaserBeam
         this.laser = new LineRenderer();
         this.laserObj = new GameObject();
         this.laserObj.name = "Laser Beam";
+        this.laserObj.tag = "Laser";
         this.pos = pos;
         this.dir = dir;
 
@@ -121,15 +122,7 @@ public class LaserBeam
         {
             if (hitInfo.collider.gameObject.GetComponent<EnemyBasic>().ThisSpriteColor.color != null && hitInfo.collider.gameObject.GetComponent<EnemyBasic>().ThisSpriteColor.color == this.laser.startColor) 
             {
-                if (ShootLaser.instance.damageCounter >= 0.5f)
-                {
-                    hitInfo.collider.gameObject.GetComponent<EnemyBasic>().EnemyHP -= ShootLaser.instance.DañoLaser;
-                    ShootLaser.instance.damageCounter = 0f;
-                }
-                else
-                {
-                    ShootLaser.instance.damageCounter += Time.deltaTime;
-                }
+                hitInfo.collider.gameObject.GetComponent<EnemyBasic>().BeingHit = true;
             }
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
@@ -138,17 +131,7 @@ public class LaserBeam
         {
             if (hitInfo.collider.gameObject.GetComponent<EnemyMedium>().ThisSpriteColor.color != null && hitInfo.collider.gameObject.GetComponent<EnemyMedium>().ThisSpriteColor.color == this.laser.startColor)
             {
-                if (ShootLaser.instance.damageCounter >= 0.5f)
-                {
-                    hitInfo.collider.gameObject.GetComponent<EnemyMedium>().EnemyHP -= ShootLaser.instance.DañoLaser;
-                    ShootLaser.instance.damageCounter = 0f;
-
-                }
-                else
-                {
-                    
-                    ShootLaser.instance.damageCounter += Time.deltaTime;
-                }
+                hitInfo.collider.gameObject.GetComponent<EnemyMedium>().BeingHit = true;
             }
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
@@ -157,23 +140,13 @@ public class LaserBeam
         {
             if (hitInfo.collider.gameObject.GetComponent<Boss>().ThisSpriteColor.color != null && hitInfo.collider.gameObject.GetComponent<Boss>().ThisSpriteColor.color == this.laser.startColor)
             {
-                if (ShootLaser.instance.damageCounter >= 0.5f)
-                {
-                    hitInfo.collider.gameObject.GetComponent<Boss>().EnemyHP -= ShootLaser.instance.DañoLaser;
-                    ShootLaser.instance.damageCounter = 0f;
-                }
-                else
-                {
-
-                    ShootLaser.instance.damageCounter += Time.deltaTime;
-                }
+                hitInfo.collider.gameObject.GetComponent<Boss>().BeingHit = true;
             }
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
         }
         else
         {
-            ShootLaser.instance.damageCounter = 0f;
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
         }
