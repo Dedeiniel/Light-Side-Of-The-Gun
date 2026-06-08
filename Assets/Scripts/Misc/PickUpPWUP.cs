@@ -15,6 +15,10 @@ public class PickUpPWUP : MonoBehaviour
     public GameObject Laser3Sprite;
     public GameObject HieloSprite;
 
+    public float Speed = 5f;
+    public float TimeToDestroyVertical = 5f;
+    public float TimeToDestroyHorizontal = 7f;
+
     void OnEnable() 
     {
         thisPower = (Power)UnityEngine.Random.Range(0, (int)Power.Count);
@@ -29,6 +33,42 @@ public class PickUpPWUP : MonoBehaviour
         else
         {
             HieloSprite.SetActive(true);
+        }
+    }
+
+    void Update() 
+    {
+        if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.UP) 
+        {
+            float TrackY = transform.position.y;
+            TrackY -= Speed * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x, TrackY, transform.position.z);
+            Destroy(this.gameObject, TimeToDestroyVertical);
+        }
+        else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.DOWN) 
+        {
+            float TrackY = transform.position.y;
+            TrackY += Speed * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x, TrackY, transform.position.z);
+            Destroy(this.gameObject, TimeToDestroyVertical);
+        }
+        else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.RIGHT)
+        {
+            float TrackX = transform.position.x;
+            TrackX -= Speed * Time.deltaTime;
+            transform.position = new Vector3(TrackX, transform.position.y, transform.position.z);
+            Destroy(this.gameObject, TimeToDestroyHorizontal);
+        }
+        else if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.LEFT)
+        {
+            float TrackX = transform.position.x;
+            TrackX += Speed * Time.deltaTime;
+            transform.position = new Vector3(TrackX, transform.position.y, transform.position.z);
+            Destroy(this.gameObject, TimeToDestroyHorizontal);
+        }
+        else 
+        {
+            Destroy(this.gameObject);
         }
     }
 

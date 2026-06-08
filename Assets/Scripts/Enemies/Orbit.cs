@@ -8,6 +8,9 @@ public class Orbit : MonoBehaviour
 
     void Update()
     {
-        transform.RotateAround(target.position, Vector3.forward, orbitSpeed * Time.deltaTime);        
+        if(FakeGameManager.instance.state == FakeGameManager.GameStates.Playing) 
+        {
+            transform.RotateAround(target.position, Vector3.forward, orbitSpeed * Time.deltaTime);
+        }        
     }
 }

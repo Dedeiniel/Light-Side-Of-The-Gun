@@ -7,11 +7,18 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.position += transform.right * BulletSpeed * Time.deltaTime;
-        if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.HUB) 
+        if(FakeGameManager.instance.state == FakeGameManager.GameStates.Playing) 
+        {
+            transform.position += transform.right * BulletSpeed * Time.deltaTime;
+            if (FakeLevelManager.instance.currentLevel == FakeLevelManager.LevelState.HUB)
+            {
+                Destroy(gameObject);
+            }
+            else { Destroy(gameObject, BulletDuration); }
+        }
+        else 
         {
             Destroy(gameObject);
         }
-        else { Destroy(gameObject, BulletDuration); }
     }
 }

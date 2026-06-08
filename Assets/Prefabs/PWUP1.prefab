@@ -143,6 +143,9 @@ MonoBehaviour:
   BombaSprite: {fileID: 4341345062085745596}
   Laser3Sprite: {fileID: 6850965077996482994}
   HieloSprite: {fileID: 7508914872146923165}
+  Speed: 3
+  TimeToDestroyVertical: 4
+  TimeToDestroyHorizontal: 5
 --- !u!65 &8463425065000196972
 BoxCollider:
   m_ObjectHideFlags: 0
